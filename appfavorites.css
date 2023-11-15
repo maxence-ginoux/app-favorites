@@ -1,0 +1,401 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: auto;
+}
+
+.bodynetflix{
+    background-color: rgb(47, 47, 47);
+    background-image: url(images/netflix4.jpg);
+    background-size: contain;
+}
+
+.menu-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background: linear-gradient(black, transparent);
+    color: white;
+    padding: 20px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+    box-sizing: border-box;
+}
+
+.menu{
+    align-items: center;
+}
+
+.menu-container a {
+    text-decoration: none;
+    color: #000000;
+    font-family: Montserrat, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: x-large;
+}
+
+.menu-container input {
+    display: block;
+    width: 35px;
+    height: 25px;
+    margin: 0;
+    position: absolute;
+}
+  
+@media only screen and (max-width: 1199px) { 
+    .menu-container {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    
+    .menu {
+      position: absolute;
+      box-sizing: border-box;
+      width: 300px;
+      right: -300px;
+      top: 0;
+      margin: -20px;
+      padding: 75px 50px 50px;
+      transform-origin: 0% 0%;
+      transform: translateX(0%);
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    }
+  
+    .menu-container input:checked ~ .menu {
+      transform: translateX(-100%);
+    }
+}
+  
+@media only screen and (min-width: 1200px) { 
+    .menu-container {
+        width: 100%;
+    }
+  
+    .menu-container a {
+      color: white;
+    }
+  
+    .menu-container input {
+      display: none;
+    }
+  
+    .menu {
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+}
+
+/********************************NAV BARRE************************************/
+.animationtitre{
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 10px 20px 0;
+    
+    /**text-shadow: white 1px 0 15px;**/
+    
+}
+
+.titrenetflix{
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: "0px";
+    font-family: 'Anton', sans-serif;
+    color: transparent;
+}
+
+.titrenetflix span{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-size: clamp(20px, 8vw, 120px);
+}
+
+.titrenetflix span::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    transform: translateX(-100%);
+}
+
+.titrenetflix:nth-child(1){
+    font-weight: 300px;
+    animation: txt-appearance 0s 1s forwards;
+}
+
+.titrenetflix:nth-child(2){
+    font-weight: 300px;
+    animation: txt-appearance 0s 1s forwards;
+}
+
+
+
+#second-title::after{
+    background-color: #E50914;
+    animation: slide-in 0.75s ease-out forwards, slide-out 0.75s 1s ease-out forwards;
+}
+
+#main-title::after{
+    background: black;
+    animation: slide-in 0.75s 0.3s ease-out forwards, slide-out 0.75s 1.3s ease-out forwards;
+}
+
+
+
+@keyframes slide-in{
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+@keyframes slide-out{
+    100%{
+        transform: translateX(100%);
+    }
+}
+
+@keyframes txt-appearance{
+    100%{  
+        color: red;
+    }
+}
+
+
+.textenetflix{
+    font-family: 'play', sans-serif;
+    font-size: x-large;
+    padding: 40px 20px;
+    color: white;
+    font-weight: 900;
+    text-align: justify;
+}
+
+.casetexte{
+    background-image: url(images/netflix2.jpg);
+        filter: brightness(70%);
+    background-size: contain;
+    width: 1300px;
+    height: auto;
+    margin-right: auto;
+    margin-top: 150px;
+    border-radius: 10px;
+
+}
+
+.casetexte2{
+    background-color: #A10010;
+    margin-left: 10%;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    margin-top: 100px;
+    display: flex;
+}
+
+.dispositiontexte{
+    display: flex;
+    flex-direction: column;
+}
+
+.logotelechargement{
+    text-align: center;
+}
+
+/*********************************NETFLIX*************************************/
+
+.bodyprimevideo{
+    background-color: #010822;
+}
+
+.bodyprimevideo H1{
+    font-family: 'Anton', sans-serif;
+    margin: 50px 0;
+    font-size: 400%;
+    text-align: center;
+    color: white;
+    text-shadow: white 1px 0 15px;
+}
+
+.caseprime1{
+    background-image: url(images/primevideo2.jpg);
+    background-size: cover;
+    height: auto;
+    width: auto;
+    padding: 30px;
+    text-align: right;
+}
+
+.caseprime1 p{
+    text-align: justify;
+    font-family: 'PT Sans Narrow', sans-serif;
+    color:white;
+    font-size: x-large;
+    padding-right: 62%;
+    padding-left: 5%;
+    font-weight: 900;
+}
+
+.caseprime2{
+    margin-top: 5%;
+}
+
+.caseprime3{
+    background-image: url(images/primevideo6.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #11BDED;
+    height: 450px;
+    width: 100%;
+    padding-left: 45%;
+    padding-top: 4%;
+    margin-bottom: 5%;
+}
+
+/*******************************PRIME VIDEO*************************************/
+
+.bodyinsta{
+    background-image: url(images/instagram2.jpg);
+    background-size: cover;
+}
+
+.titreinsta{
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: "0px";
+    font-family: 'Grand Hotel', cursive;
+    color: transparent;
+    text-align: center;
+}
+
+.titreinsta span{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    font-size: clamp(20px, 8vw, 120px);
+}
+
+.titreinsta span::after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    transform: translateX(-100%);
+}
+
+.titreinsta:nth-child(3){
+    font-weight: 300px;
+    animation: txt-appearance 0s 1s forwards;
+}
+
+#title3::after{
+    background: white;
+    animation: slide-in 0.75s ease-out forwards, slide-out 0.75s 1s ease-out forwards;
+}
+
+#title3{
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: -webkit-linear-gradient(left, #F27E32, orange, pink, #D02D8F, #515FCF, violet);
+    margin-bottom: 80px;
+}
+
+.soustitreinsta{
+    font-family: 'Grand Hotel', cursive;
+    text-align: center;
+    font-size: xx-large;
+    margin-top: 10px;
+}
+
+.texteinsta{
+    font-family: 'Grand Hotel', cursive;
+font-size: x-large;
+    text-align: justify;}
+
+.introinsta{
+    font-family: 'Grand Hotel', cursive;
+    text-align: center;
+    font-size: x-large;
+    margin:20px 20px 50px 20px;
+}
+
+.caseinsta2{
+    text-align: center;
+}
+
+.caseinsta3{
+    display: flex;
+    margin-top: 50px;
+    align-items: center;
+}
+
+.textecaseinsta3{
+    width: 800px;
+    margin: 0 20px;
+    
+}
+
+.caseinsta4{
+    background-image: url(images/instagram5.png);
+    background-repeat: no-repeat;
+    height: auto;
+    padding: 70px 250px;
+}
+
+.logotelechargement{
+    margin-top: 4%;
+}
+
+/*******************************INSTAGRAM****************************************/
+
+.bodyindex{
+    background-color: black;
+}
+
+.caseindex1{
+    color: white;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.titreindex{
+    font-weight: 900;
+    font-size: 500%;
+}
+.caseindex2{
+    margin: 60px 30px;
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.souscaseindex2{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.introappindex{
+    padding: 10px 20px;
+    text-align: justify;
+}
+
+.caseindex3{
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    margin: 50px;
+    text-align: center;
+}
